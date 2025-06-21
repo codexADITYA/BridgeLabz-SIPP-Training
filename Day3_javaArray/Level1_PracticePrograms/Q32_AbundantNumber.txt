@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Q32_AbundantNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        int sumDivisors = 0;
+        for (int i = 1; i < number; i++) {
+            if (number % i == 0) {
+                sumDivisors += i;
+            }
+        }
+        if (sumDivisors > number) {
+            System.out.println("Abundant Number");
+        } else {
+            System.out.println("Not an Abundant Number");
+        }
+        scanner.close();
+    }
+}
